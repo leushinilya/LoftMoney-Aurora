@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.leushinilya.LoftMoney
+Exec=/usr/bin/ru.leushinilya.LoftMoney
+Name=LoftMoney
+Name[ru]=Шаблон
+
+[X-Application]
+Permissions=Sensors;SecureStorage;PushNotifications;Internet;Location;UserDirs
+OrganizationName=ru.leushinilya
+ApplicationName=LoftMoney
+ExecDBus=/usr/bin/ru.leushinilya.LoftMoney
