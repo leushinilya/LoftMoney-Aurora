@@ -48,6 +48,7 @@ SOURCES += \
 HEADERS += \
 
 DISTFILES += \
+    qml/pages/LoginPage.qml \
     rpm/ru.leushinilya.LoftMoney.spec \
     AUTHORS.md \
     CODE_OF_CONDUCT.md \
