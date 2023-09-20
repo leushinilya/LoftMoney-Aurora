@@ -47,7 +47,7 @@
         <translation type="unfinished">Шаблон</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoginPage.qml" line="37"/>
+        <location filename="../qml/pages/LoginPage.qml" line="71"/>
         <source>Login</source>
         <translation>Войти</translation>
     </message>

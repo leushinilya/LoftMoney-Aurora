@@ -36,6 +36,7 @@ Page {
         id: button
         backgroundColor: "transparent"
         highlightBackgroundColor: page.backgroundColor
+        onPressed: pageStack.push(Qt.resolvedUrl("AddItemPage.qml"))
 
         anchors {
             top: title.bottom
@@ -60,8 +61,9 @@ Page {
                 color: "#F76C41"
                 anchors {
                     verticalCenter: parent.verticalCenter
+                    left: parent.left
                     right: buttonText.left
-                    rightMargin: Theme.dp(8)
+//                    rightMargin: Theme.dp(8)
                 }
             }
 
@@ -69,10 +71,14 @@ Page {
                 id: buttonText
                 text: qsTr("Login")
                 color: page.backgroundColor
-                anchors.centerIn: parent
                 font {
                     pixelSize: Theme.fontSizeMedium
                     weight: Font.Medium
+                }
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    right: parent.right
+                    left: buttonIcon.right
                 }
             }
         }
