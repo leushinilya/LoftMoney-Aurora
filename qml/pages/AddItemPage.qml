@@ -10,24 +10,52 @@ Page {
     property color outColor: "#3574FA"
     property color hintColor: "#DBDBDB"
 
-    TextField {
-        id: sum
-        placeholderText: "Sum"
-        color: inColor
-        placeholderColor: hintColor
-        inputMethodHints: Qt.ImhDigitsOnly
-        anchors.bottom: label.top
-    }
-
-    TextField {
-        id: label
-        placeholderText: "Label"
+    Item {
+        height: children.height
+        width: Theme.buttonWidthMedium
         anchors {
-            bottom: parent.bottom
-            top: sum.bottom
-        }
-        color: inColor
-        placeholderColor: hintColor
+            horizontalCenter: parent.horizontalCenter
 
+        }
+
+        TextField {
+            id: sum
+            placeholderText: "Sum"
+            color: inColor
+            placeholderColor: hintColor
+            inputMethodHints: Qt.ImhDigitsOnly
+            anchors.bottom: label.top
+        }
+
+        TextField {
+            id: label
+            placeholderText: "Label"
+            anchors {
+                top: sum.bottom
+            }
+            color: inColor
+            placeholderColor: hintColor
+        }
+
+        Button {
+            anchors.top: label.bottom
+            icon {
+                id: buttonIcon
+                source: Qt.resolvedUrl("../icons/Check.svg")
+                sourceSize {
+                    width: Theme.iconSizeSmall
+                    //                height: Theme.dp(30)
+                }
+                color: inColor
+            }
+            text: "ADD"
+            color: inColor
+            backgroundColor: "white"
+
+            width: Theme.buttonWidthMedium
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+            }
+        }
     }
 }
