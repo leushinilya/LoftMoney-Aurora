@@ -15,7 +15,6 @@ Page {
         width: Theme.buttonWidthMedium
         anchors {
             horizontalCenter: parent.horizontalCenter
-
         }
 
         TextField {

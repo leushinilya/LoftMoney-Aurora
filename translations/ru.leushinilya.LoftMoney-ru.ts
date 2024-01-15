@@ -46,11 +46,6 @@
         <source>LoftMoney</source>
         <translation type="unfinished">Шаблон</translation>
     </message>
-    <message>
-        <location filename="../qml/pages/LoginPage.qml" line="72"/>
-        <source>Login</source>
-        <translation>Войти</translation>
-    </message>
 </context>
 <context>
     <name>MainPage</name>

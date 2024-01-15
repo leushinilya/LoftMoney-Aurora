@@ -5,6 +5,9 @@ Page {
     id: page
     backgroundColor: "#3574FA"
 
+    property color buttonIconColor: "#F76C41"
+    property color buttonColor: "white"
+
     Image {
         id: logo
         source: "../icons/LoftLogo.svg"
@@ -36,8 +39,7 @@ Page {
         id: button
         backgroundColor: "transparent"
         highlightBackgroundColor: page.backgroundColor
-        onPressed: pageStack.push(Qt.resolvedUrl("AddItemPage.qml"))
-
+        onReleased: pageStack.push(Qt.resolvedUrl("AddItemPage.qml"))
         anchors {
             top: title.bottom
             topMargin: Theme.paddingLarge * 2
@@ -47,7 +49,6 @@ Page {
         Rectangle {
             radius: 500
             anchors {
-                centerIn: parent
                 fill: parent
             }
 
@@ -58,12 +59,11 @@ Page {
                     width: Theme.dp(46)
                     height: Theme.dp(30)
                 }
-                color: "#F76C41"
+                color: buttonIconColor
                 anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
                     right: buttonText.left
-//                    rightMargin: Theme.dp(8)
+                    verticalCenter: parent.verticalCenter
+                    rightMargin: Theme.dp(8)
                 }
             }
 
@@ -77,8 +77,7 @@ Page {
                 }
                 anchors {
                     verticalCenter: parent.verticalCenter
-                    right: parent.right
-                    left: buttonIcon.right
+                    horizontalCenter: parent.horizontalCenter
                 }
             }
         }

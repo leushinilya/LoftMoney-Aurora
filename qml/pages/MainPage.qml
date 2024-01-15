@@ -50,7 +50,6 @@ Page {
                 objectName: "aboutButton"
                 icon.source: "image://theme/icon-m-about"
                 anchors.verticalCenter: parent.verticalCenter
-
                 onClicked: pageStack.push(Qt.resolvedUrl("LoginPage.qml"))
             }
         ]
