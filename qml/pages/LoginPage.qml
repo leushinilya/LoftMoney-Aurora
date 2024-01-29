@@ -39,7 +39,7 @@ Page {
         id: button
         backgroundColor: "transparent"
         highlightBackgroundColor: page.backgroundColor
-        onReleased: pageStack.push(Qt.resolvedUrl("AddItemPage.qml"))
+        onReleased: pageStack.push(Qt.resolvedUrl("ListPage.qml"))
         anchors {
             top: title.bottom
             topMargin: Theme.paddingLarge * 2
@@ -48,36 +48,43 @@ Page {
 
         Rectangle {
             radius: 500
-            anchors {
-                fill: parent
-            }
+            anchors.fill: parent
 
-            Icon {
-                id: buttonIcon
-                source: Qt.resolvedUrl("../icons/GoogleLogo.svg")
-                sourceSize {
-                    width: Theme.dp(46)
-                    height: Theme.dp(30)
-                }
-                color: buttonIconColor
-                anchors {
-                    right: buttonText.left
-                    verticalCenter: parent.verticalCenter
-                    rightMargin: Theme.dp(8)
-                }
-            }
-
-            Text {
-                id: buttonText
-                text: qsTr("Login")
-                color: page.backgroundColor
-                font {
-                    pixelSize: Theme.fontSizeMedium
-                    weight: Font.Medium
-                }
+            Rectangle {
+                width: childrenRect.width
+                height: childrenRect.height
                 anchors {
                     verticalCenter: parent.verticalCenter
                     horizontalCenter: parent.horizontalCenter
+                }
+
+                Icon {
+                    id: buttonIcon
+                    source: Qt.resolvedUrl("../icons/GoogleLogo.svg")
+                    sourceSize {
+                        width: Theme.dp(46)
+                        height: Theme.dp(30)
+                    }
+                    color: buttonIconColor
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                    }
+                }
+
+                Text {
+                    id: buttonText
+                    text: qsTr("Login")
+                    color: page.backgroundColor
+                    font {
+                        pixelSize: Theme.fontSizeMedium
+                        weight: Font.Medium
+                    }
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: buttonIcon.right
+                        leftMargin: Theme.dp(8)
+                    }
                 }
             }
         }

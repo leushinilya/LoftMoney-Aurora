@@ -10,13 +10,13 @@ Page {
     property color outColor: "#3574FA"
     property color hintColor: "#DBDBDB"
 
-    Item {
-        height: children.height
+    Rectangle {
+        height: childrenRect.height
         width: Theme.buttonWidthMedium
         anchors {
             horizontalCenter: parent.horizontalCenter
+            verticalCenter: parent.verticalCenter
         }
-
         TextField {
             id: sum
             placeholderText: "Sum"

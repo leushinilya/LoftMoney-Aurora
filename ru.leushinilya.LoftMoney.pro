@@ -49,6 +49,7 @@ HEADERS += \
 
 DISTFILES += \
     qml/pages/AddItemPage.qml \
+    qml/pages/ListPage.qml \
     qml/pages/LoginPage.qml \
     rpm/ru.leushinilya.LoftMoney.spec \
     AUTHORS.md \

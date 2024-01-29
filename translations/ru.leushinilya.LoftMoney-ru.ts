@@ -42,17 +42,14 @@
 <context>
     <name>LoginPage</name>
     <message>
-        <location filename="../qml/pages/LoginPage.qml" line="21"/>
+        <location filename="../qml/pages/LoginPage.qml" line="24"/>
         <source>LoftMoney</source>
         <translation type="unfinished">Шаблон</translation>
     </message>
-</context>
-<context>
-    <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="47"/>
-        <source>LoftMoney</source>
-        <translation>Шаблон</translation>
+        <location filename="../qml/pages/LoginPage.qml" line="77"/>
+        <source>Login</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
