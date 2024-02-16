@@ -39,7 +39,7 @@ Page {
         id: button
         backgroundColor: "transparent"
         highlightBackgroundColor: page.backgroundColor
-        onReleased: pageStack.push(Qt.resolvedUrl("ListPage.qml"))
+        onReleased: pageStack.push(Qt.resolvedUrl("MainPage.qml"))
         anchors {
             top: title.bottom
             topMargin: Theme.paddingLarge * 2
