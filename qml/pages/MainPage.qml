@@ -1,60 +1,84 @@
-import QtQuick 2.0
+import QtQuick 2.4
 import Sailfish.Silica 1.0
-import Sailfish.Silica.private 1.0
+import "../components"
 
 Page {
     id: root
 
+    property bool footerPosition: false // set here true of false to change tabs postions from top to bottom
+    property bool noTitle
+    property bool noIcon
+    property int display: 2
+    readonly property string labelText: qsTr("Empty tab")
+
+//    backNavigation: false
+
     TabView {
         id: tabs
+
+        property var _viewModel: [view_1, view_2]
         width: parent.width
-        height: parent.height
-        footer: tabBar
-        property var viewModel: [tabBar, incomesTab, outcomesTab, incomePage, outcomePage]
-        model: viewModel.slice(0, 5)
+        height: root.height
+
+        header: root.footerPosition ? null : tabBar
+        footer: root.footerPosition ? tabBar : null
+
+        model: _viewModel.slice(0, root.display)
 
         Component {
             id: tabBar
+
             TabBar {
                 model: tabModel
             }
         }
 
         Component {
-            id: incomesTab
-            TabItem {
-                Text {
-                    width: parent.width
-                    height: parent.height
-                    text: "Incomes"
-                }
-            }
-        }
+            id: view_1
 
-        Component {
-            id: outcomesTab
-            TabItem {
-                Text {
-                    width: parent.width
-                    height: parent.height
-                    text: "Outcomes"
-                }
-            }
-        }
-
-        Component {
-            id: incomePage
             ListPage {
 
             }
         }
 
         Component {
-            id: outcomePage
+            id: view_2
+
             ListPage {
 
+            }
+        }
+
+    }
+
+    Component.onCompleted: {
+        prepareModel()
+    }
+
+    function prepareModel() {
+        if (root.display < tabModel.count) {
+            tabModel.remove(root.display, tabModel.count - root.display)
+        }
+        for (var i = 0; i < tabModel.count; i++) {
+            if (root.noTitle) {
+                tabModel.setProperty(i, "title", "")
+            }
+            if (root.noIcon) {
+                tabModel.setProperty(i, "icon", "")
             }
         }
     }
 
+    ListModel {
+        id: tabModel
+
+        ListElement {
+            title: qsTr("Incomes")
+        }
+        ListElement {
+            title: qsTr("Outcomes")
+        }
+
+    }
 }
+
