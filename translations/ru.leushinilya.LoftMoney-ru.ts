@@ -52,4 +52,22 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>MainPage</name>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="13"/>
+        <source>Empty tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="82"/>
+        <source>Incomes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="85"/>
+        <source>Outcomes</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

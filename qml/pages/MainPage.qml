@@ -1,9 +1,11 @@
-import QtQuick 2.4
+import QtQuick 2.6
 import Sailfish.Silica 1.0
+import Aurora.Controls 1.0
 import "../components"
 
 Page {
     id: root
+    backgroundColor: "#3574FA"
 
     property bool footerPosition: false // set here true of false to change tabs postions from top to bottom
     property bool noTitle
@@ -11,7 +13,20 @@ Page {
     property int display: 2
     readonly property string labelText: qsTr("Empty tab")
 
-//    backNavigation: false
+    //    backNavigation: false
+    AppBar {
+        id: appBar
+
+        //        divider: false
+        headerText: "Учёт бюджета"
+
+        AppBarSpacer {}
+
+        AppBarButton {
+            context: "Print document"
+            icon.source: "image://theme/icon-m-delete"
+        }
+    }
 
     TabView {
         id: tabs
@@ -19,6 +34,8 @@ Page {
         property var _viewModel: [view_1, view_2]
         width: parent.width
         height: root.height
+
+        anchors.top: appBar.bottom
 
         header: root.footerPosition ? null : tabBar
         footer: root.footerPosition ? tabBar : null
@@ -36,19 +53,14 @@ Page {
         Component {
             id: view_1
 
-            ListPage {
-
-            }
+            ListPage {}
         }
 
         Component {
             id: view_2
 
-            ListPage {
-
-            }
+            ListPage {}
         }
-
     }
 
     Component.onCompleted: {
@@ -78,7 +90,5 @@ Page {
         ListElement {
             title: qsTr("Outcomes")
         }
-
     }
 }
-
