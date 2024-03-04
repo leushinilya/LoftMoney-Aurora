@@ -2,10 +2,11 @@ import QtQuick 2.6
 import Sailfish.Silica 1.0
 import Aurora.Controls 1.0
 import "../components"
+import "../theme"
 
 Page {
     id: root
-    backgroundColor: "#3574FA"
+    backgroundColor: "#3574fa"
 
     property bool footerPosition: false // set here true of false to change tabs postions from top to bottom
     property bool noTitle
@@ -89,6 +90,24 @@ Page {
         }
         ListElement {
             title: qsTr("Outcomes")
+        }
+    }
+
+    Button {
+        width: Theme.dp(56)
+        height: Theme.dp(56)
+        backgroundColor: "transparent"
+        highlightBackgroundColor: "transparent"
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+            margins: Theme.dp(16)
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            radius: 500
+            color: "#ffc107"
         }
     }
 }
