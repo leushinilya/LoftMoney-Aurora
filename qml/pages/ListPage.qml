@@ -4,45 +4,60 @@ import "../components"
 
 TabItem {
 
-    SilicaListView {
+    property color inColor: "#7ED321"
+    property color outColor: "#3574FA"
+    property color textColor: "#666664"
+
+    Rectangle {
+        color: "white"
         width: parent.width
         height: parent.height
 
-        model: ListModel {
-            ListElement {
-                itemId: "1"
-                name: "Fist item"
-                price: "65.5"
-            }
-            ListElement {
-                itemId: "2"
-                name: "Second item"
-                price: "655"
-            }
-            ListElement {
-                itemId: "3"
-                name: "Third item"
-                price: "1655"
-            }
-        }
-
-        delegate: SilicaItem {
+        SilicaListView {
             width: parent.width
-            height: childrenRect.height
-            Text {
-                id: nameText
-                text: name
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    left: parent.left
+            height: parent.height
+
+            model: ListModel {
+                ListElement {
+                    itemId: "1"
+                    name: "Fist item"
+                    price: "65.5"
+                }
+                ListElement {
+                    itemId: "2"
+                    name: "Second item"
+                    price: "655"
+                }
+                ListElement {
+                    itemId: "3"
+                    name: "Third item"
+                    price: "1655"
                 }
             }
-            Text {
-                id: priceText
-                text: price
-                anchors {
-                    verticalCenter: parent.verticalCenter
-                    right: parent.right
+
+            delegate: Rectangle {
+                width: parent.width
+                height: childrenRect.height + Theme.dp(24) * 2
+
+                Text {
+                    id: nameText
+                    text: name
+                    color: textColor
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        left: parent.left
+                        leftMargin: Theme.dp(24)
+                    }
+                }
+                Text {
+                    id: priceText
+                    text: price
+                    color: inColor
+                    anchors {
+                        verticalCenter: parent.verticalCenter
+                        right: parent.right
+                        rightMargin: Theme.dp(24)
+                    }
                 }
             }
         }
