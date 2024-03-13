@@ -49,6 +49,7 @@ HEADERS += \
 
 DISTFILES += \
     qml/pages/AddItemPage.qml \
+    qml/pages/DiagramPage.qml \
     qml/pages/ListPage.qml \
     qml/pages/LoginPage.qml \
     qml/pages/MainPage.qml \

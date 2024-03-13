@@ -47,7 +47,7 @@
         <translation type="unfinished">LoftMoney</translation>
     </message>
     <message>
-        <location filename="../qml/pages/LoginPage.qml" line="77"/>
+        <location filename="../qml/pages/LoginPage.qml" line="76"/>
         <source>Login</source>
         <translation type="unfinished"></translation>
     </message>
@@ -60,13 +60,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="89"/>
+        <location filename="../qml/pages/MainPage.qml" line="102"/>
         <source>Incomes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="92"/>
+        <location filename="../qml/pages/MainPage.qml" line="105"/>
         <source>Outcomes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="108"/>
+        <source>Balance</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

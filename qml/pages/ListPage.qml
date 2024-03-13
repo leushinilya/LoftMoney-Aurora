@@ -4,8 +4,7 @@ import "../components"
 
 TabItem {
 
-    property color inColor: "#7ED321"
-    property color outColor: "#3574FA"
+    property color priceColor: "#7ED321"
     property color textColor: "#666664"
 
     Rectangle {
@@ -52,7 +51,7 @@ TabItem {
                 Text {
                     id: priceText
                     text: price
-                    color: inColor
+                    color: priceColor
                     anchors {
                         verticalCenter: parent.verticalCenter
                         right: parent.right

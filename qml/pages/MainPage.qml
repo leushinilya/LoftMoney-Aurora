@@ -11,7 +11,7 @@ Page {
     property bool footerPosition: false // set here true of false to change tabs postions from top to bottom
     property bool noTitle
     property bool noIcon
-    property int display: 2
+    property int display: 3
     readonly property string labelText: qsTr("Empty tab")
 
     //    backNavigation: false
@@ -25,14 +25,17 @@ Page {
 
         AppBarButton {
             context: "Print document"
-            icon.source: "image://theme/icon-m-delete"
+            icon {
+                source: Qt.resolvedUrl("../icons/Trash.svg")
+                color: "white"
+                colorWeight: 1
+            }
         }
     }
 
     TabView {
         id: tabs
-
-        property var _viewModel: [view_1, view_2]
+        property var _viewModel: [view_1, view_2, view_3]
         width: parent.width
         height: root.height
 
@@ -54,13 +57,23 @@ Page {
         Component {
             id: view_1
 
-            ListPage {}
+            ListPage {
+                priceColor: "#7ED321"
+            }
         }
 
         Component {
             id: view_2
 
-            ListPage {}
+            ListPage {
+                priceColor: "#3574FA"
+            }
+        }
+
+        Component {
+            id: view_3
+
+            DiagramPage {}
         }
     }
 
@@ -91,23 +104,40 @@ Page {
         ListElement {
             title: qsTr("Outcomes")
         }
+        ListElement {
+            title: qsTr("Balance")
+        }
     }
 
     Button {
-        width: Theme.dp(56)
-        height: Theme.dp(56)
-        backgroundColor: "transparent"
-        highlightBackgroundColor: "transparent"
+        width: Theme.buttonWidthTiny
+        height: Theme.buttonWidthTiny
+        _showPress: false
         anchors {
             right: parent.right
             bottom: parent.bottom
-            margins: Theme.dp(16)
+            margins: Theme.paddingMedium
         }
 
         Rectangle {
             anchors.fill: parent
             radius: 500
             color: "#ffc107"
+            Icon {
+                id: buttonIcon
+                source: Qt.resolvedUrl("../icons/Plus.svg")
+                sourceSize {
+                    width: Theme.dp(32)
+                    height: Theme.dp(32)
+                }
+                color: "white"
+                colorWeight: 1
+                anchors.centerIn: parent
+            }
+        }
+
+        onClicked: {
+            pageStack.push(Qt.resolvedUrl("AddItemPage.qml"))
         }
     }
 }
