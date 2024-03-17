@@ -48,6 +48,7 @@ SOURCES += \
 HEADERS += \
 
 DISTFILES += \
+    qml/components/Diagram.qml \
     qml/pages/AddItemPage.qml \
     qml/pages/DiagramPage.qml \
     qml/pages/ListPage.qml \
