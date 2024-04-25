@@ -10,7 +10,6 @@ Canvas {
     property color outcomeColor: "#3574FA"
     property real sectorSpacing: Theme.dp(8)
 
-    anchors.fill: parent
     onPaint: {
         var ctx = getContext("2d")
         ctx.reset()

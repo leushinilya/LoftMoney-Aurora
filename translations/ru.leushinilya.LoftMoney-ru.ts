@@ -40,6 +40,14 @@
     </message>
 </context>
 <context>
+    <name>DiagramPage</name>
+    <message>
+        <location filename="../qml/pages/DiagramPage.qml" line="25"/>
+        <source>Доступные финансы</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LoginPage</name>
     <message>
         <location filename="../qml/pages/LoginPage.qml" line="24"/>
