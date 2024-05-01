@@ -42,8 +42,18 @@
 <context>
     <name>DiagramPage</name>
     <message>
-        <location filename="../qml/pages/DiagramPage.qml" line="25"/>
+        <location filename="../qml/pages/DiagramPage.qml" line="29"/>
         <source>Доступные финансы</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DiagramPage.qml" line="71"/>
+        <source>Расход</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/DiagramPage.qml" line="116"/>
+        <source>Доход</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
