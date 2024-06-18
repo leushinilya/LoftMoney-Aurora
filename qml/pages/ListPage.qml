@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import "../components"
+import Module.Models 1.0
 
 TabItem {
 
@@ -11,6 +12,10 @@ TabItem {
         color: "white"
         width: parent.width
         height: parent.height
+
+        Transaction {
+
+        }
 
         SilicaListView {
             width: parent.width

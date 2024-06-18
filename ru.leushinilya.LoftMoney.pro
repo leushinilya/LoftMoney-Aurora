@@ -44,8 +44,10 @@ PKGCONFIG += \
 
 SOURCES += \
     src/main.cpp \
+    src/transaction.cpp
 
 HEADERS += \
+    src/transaction.h
 
 DISTFILES += \
     qml/components/Diagram.qml \

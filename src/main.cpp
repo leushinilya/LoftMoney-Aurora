@@ -35,6 +35,8 @@
 **
 *******************************************************************************/
 
+#include "transaction.h"
+
 #include <auroraapp.h>
 #include <QtQuick>
 
@@ -47,6 +49,8 @@ int main(int argc, char *argv[])
     QScopedPointer<QQuickView> view(Aurora::Application::createView());
     view->setSource(Aurora::Application::pathTo(QStringLiteral("qml/LoftMoney.qml")));
     view->show();
+
+    qmlRegisterType<Transaction>("Module.Models", 1, 0, "Transaction");
 
     return application->exec();
 }
