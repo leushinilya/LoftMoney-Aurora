@@ -42,17 +42,17 @@
 <context>
     <name>DiagramPage</name>
     <message>
-        <location filename="../qml/pages/DiagramPage.qml" line="29"/>
+        <location filename="../qml/pages/DiagramPage.qml" line="32"/>
         <source>Доступные финансы</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DiagramPage.qml" line="71"/>
+        <location filename="../qml/pages/DiagramPage.qml" line="77"/>
         <source>Расход</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DiagramPage.qml" line="116"/>
+        <location filename="../qml/pages/DiagramPage.qml" line="122"/>
         <source>Доход</source>
         <translation type="unfinished"></translation>
     </message>
