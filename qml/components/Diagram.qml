@@ -8,7 +8,11 @@ Canvas {
 
     property color incomeColor: "#7ED321"
     property color outcomeColor: "#3574FA"
-    property real sectorSpacing: Theme.dp(8)
+    property real sectorSpacing: 0
+    property real size: 0
+
+    width: size + sectorSpacing
+    height: size
 
     onPaint: {
         var ctx = getContext("2d")

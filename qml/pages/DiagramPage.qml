@@ -22,7 +22,10 @@ TabItem {
             anchors {
                 top: parent.top
             }
-            border.color: "lightGray"
+            border {
+                color: "lightGray"
+                width: 1
+            }
 
             Text {
                 id: availableAmountTitle
@@ -64,7 +67,10 @@ TabItem {
                 top: availableLayout.bottom
                 left: parent.left
             }
-            border.color: "lightGray"
+            border {
+                color: "lightGray"
+                width: 1
+            }
 
             Text {
                 id: outcomesTitle
@@ -108,7 +114,7 @@ TabItem {
             }
             border {
                 color: "lightGray"
-                width: 2
+                width: 1
             }
 
             Text {
@@ -146,11 +152,11 @@ TabItem {
         Diagram {
             incomeValue: incomesAmount
             outcomeValue: outcomesAmount
+            size: parent.width / 2
+            sectorSpacing: Theme.paddingLarge
             anchors {
-                top: incomesLayout.bottom
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
+                verticalCenter: parent.verticalCenter
+                horizontalCenter: parent.horizontalCenter
             }
         }
     }

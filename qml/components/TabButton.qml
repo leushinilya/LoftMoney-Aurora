@@ -68,7 +68,7 @@ SilicaControl {
             id: titleLabel
 
             x: (contentColumn.width - width) / 2
-            color: highlightImage.highlighted ? palette.highlightColor : palette.primaryColor
+            color: highlightImage.highlighted ? palette.primaryColor : palette.highlightColor
             font.pixelSize: highlightImage.status === Image.Ready ? Theme.fontSizeTiny : root.titleFontSize
         }
     }
