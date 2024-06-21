@@ -70,3 +70,5 @@ CONFIG += auroraapp_i18n
 TRANSLATIONS += \
     translations/ru.leushinilya.LoftMoney.ts \
     translations/ru.leushinilya.LoftMoney-ru.ts \
+
+QT += network
